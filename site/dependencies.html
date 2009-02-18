@@ -42,7 +42,7 @@
   
     
             <div class="xleft">
-        Last Published: 2008-12-05
+        Last Published: 2009-02-18
                       </div>
             <div class="xright">            <a href="${project.url}">SkypeProxy</a>
             
@@ -90,6 +90,10 @@
       
             
       
+            
+      
+            
+      
               
             <li class="expanded">
                     <a href="project-info.html">Project Information</a>
@@ -116,7 +120,15 @@
           </li>
                   
     <li class="none">
+                    <a href="plugin-management.html">Plugin Management</a>
+          </li>
+                  
+    <li class="none">
                     <a href="license.html">Project License</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="plugins.html">Project Plugins</a>
           </li>
                   
     <li class="none">
@@ -154,141 +166,378 @@
 <table class="bodyTable"><tr class="a"><th>GroupId</th>
 <th>ArtifactId</th>
 <th>Version</th>
-<th>Classifier</th>
 <th>Type</th>
-<th>Optional</th>
 </tr>
 <tr class="b"><td>com.skype</td>
 <td>skype-full</td>
 <td>1.0</td>
-<td>-</td>
 <td>jar</td>
-<td> </td>
 </tr>
 <tr class="a"><td>commons-codec</td>
-<td>commons-codec</td>
-<td>20041127.091804</td>
-<td>-</td>
+<td><a href="http://jakarta.apache.org/commons/codec/" class="externalLink">commons-codec</a>
+</td>
+<td>1.3</td>
 <td>jar</td>
-<td> </td>
 </tr>
-<tr class="b"><td>geronimo</td>
-<td>commons-logging</td>
-<td>1.0.4</td>
-<td>-</td>
+<tr class="b"><td>commons-logging</td>
+<td><a href="http://commons.apache.org/logging" class="externalLink">commons-logging</a>
+</td>
+<td>1.1.1</td>
 <td>jar</td>
-<td> </td>
 </tr>
-<tr class="a"><td>org.apache.axis</td>
+<tr class="a"><td>junit</td>
+<td><a href="http://junit.org" class="externalLink">junit</a>
+</td>
+<td>3.8.1</td>
+<td>jar</td>
+</tr>
+<tr class="b"><td>org.apache.axis</td>
 <td>axis</td>
 <td>1.4</td>
-<td>-</td>
 <td>jar</td>
-<td> </td>
 </tr>
-<tr class="b"><td>org.ostermiller</td>
-<td>utils</td>
+<tr class="a"><td>org.ostermiller</td>
+<td><a href="http://ostermiller.org/utils/" class="externalLink">utils</a>
+</td>
 <td>1.07.00</td>
-<td>-</td>
 <td>jar</td>
-<td> </td>
 </tr>
-<tr class="a"><td>soap</td>
+<tr class="b"><td>soap</td>
 <td>soap</td>
 <td>2.3.1</td>
-<td>-</td>
 <td>jar</td>
-<td> </td>
 </tr>
 </table>
 </div>
 </div>
 <div class="section"><h2>Project Transitive Dependencies</h2>
-<p>The following is a list of transitive dependencies for this project. Transitive dependencies are the dependencies of the project dependencies.</p>
-<div class="section"><h3>compile</h3>
-<p>The following is a list of compile dependencies for this project. These dependencies are required to compile and run the application:</p>
-<table class="bodyTable"><tr class="b"><th>GroupId</th>
-<th>ArtifactId</th>
-<th>Version</th>
-<th>Classifier</th>
-<th>Type</th>
-<th>Optional</th>
-</tr>
-<tr class="a"><td>junit</td>
-<td>junit</td>
-<td>3.8.1</td>
-<td>-</td>
-<td>jar</td>
-<td> </td>
-</tr>
-</table>
-</div>
+<p>No transitive dependencies are required for this project.</p>
 </div>
 <div class="section"><h2>Project Dependency Graph</h2>
+<script language="javascript" type="text/javascript">
+      function toggleDependencyDetail( divId, imgId )
+      {
+        var div = document.getElementById( divId );
+        var img = document.getElementById( imgId );
+        if( div.style.display == '' )
+        {
+          div.style.display = 'none';
+          img.src='./images/icon_info_sml.gif';
+        }
+        else
+        {
+          div.style.display = '';
+          img.src='./images/close.gif';
+        }
+      }
+</script>
 <div class="section"><h3>Dependency Tree</h3>
-<p><ul><li><a href="#nr.co.blky:skypeproxy:war">nr.co.blky:skypeproxy:war</a>
-<ul><li><a href="#commons-codec:commons-codec:jar">commons-codec:commons-codec:jar</a>
-<ul><li><a href="#junit:junit:jar">junit:junit:jar</a>
-</li>
-</ul>
+<ul><li>nr.co.blky:skypeproxy:war:0.0.6 <img id="_878797516" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1284563696', '_878797516' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1284563696" style="display:none"><table class="bodyTable"><tr class="a"><th>SkypeProxy</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+Skype proxy - TCP tunneling by using Skype(C)API</p>
+<p><b>Project License: </b>
+<a href="http://www.gnu.org/copyleft/gpl.html" class="externalLink">GPL</a>
 </p>
-</li>
-<li><a href="#org.apache.axis:axis:jar">org.apache.axis:axis:jar</a>
-</li>
-<li><a href="#org.ostermiller:utils:jar">org.ostermiller:utils:jar</a>
-</li>
-<li><a href="#geronimo:commons-logging:jar">geronimo:commons-logging:jar</a>
-</li>
-<li><a href="#com.skype:skype-full:jar">com.skype:skype-full:jar</a>
-</li>
-<li><a href="#soap:soap:jar">soap:soap:jar</a>
-</li>
-</ul>
+</td>
+</tr>
+</table>
+</div><ul><li>junit:junit:jar:3.8.1 (compile) <img id="_148310839" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_471073877', '_148310839' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_471073877" style="display:none"><table class="bodyTable"><tr class="a"><th>JUnit</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+JUnit is a regression testing framework written by Erich Gamma and Kent Beck. It is used by the developer who implements unit tests in Java.</p>
+<p><b>URL: </b>
+<a href="http://junit.org" class="externalLink">http://junit.org</a>
 </p>
-</li>
-</ul>
+<p><b>Project License: </b>
+<a href="http://www.opensource.org/licenses/cpl1.0.txt" class="externalLink">Common Public License Version 1.0</a>
 </p>
-</div>
-<div class="section"><h3>Dependency Listings</h3>
-<p><a name="nr.co.blky:skypeproxy:war"><b>SkypeProxy</b>
-</a>
-</p>
-<p>Skype proxy - TCP tunneling by using Skype(C)API</p>
-<p><a name="commons-codec:commons-codec:jar"><b>Codec</b>
-</a>
-</p>
-<p>The codec package contains simple encoder and decoders for
+</td>
+</tr>
+</table>
+</div></li>
+<li>commons-codec:commons-codec:jar:1.3 (compile) <img id="_84452401" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1935852782', '_84452401' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1935852782" style="display:none"><table class="bodyTable"><tr class="a"><th>Codec</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+The codec package contains simple encoder and decoders for
    various formats such as Base64 and Hexadecimal.  In addition to these
    widely used encoders and decoders, the codec package also maintains a
    collection of phonetic encoding utilities.</p>
-<p><a href="http://jakarta.apache.org/commons/${pom.artifactId.substring(8)}/" class="externalLink">http://jakarta.apache.org/commons/${pom.artifactId.substring(8)}/</a>
+<p><b>URL: </b>
+<a href="http://jakarta.apache.org/commons/codec/" class="externalLink">http://jakarta.apache.org/commons/codec/</a>
 </p>
-<p><a name="junit:junit:jar"><b>JUnit</b>
-</a>
+<p><b>Project License: </b>
+<a href="/LICENSE.txt">The Apache Software License, Version 2.0</a>
 </p>
-<p>JUnit is a regression testing framework written by Erich Gamma and Kent Beck. It is used by the developer who implements unit tests in Java.</p>
-<p><a href="http://junit.org" class="externalLink">http://junit.org</a>
+</td>
+</tr>
+</table>
+</div></li>
+<li>org.apache.axis:axis:jar:1.4 (compile) <img id="_1745689080" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_810301692', '_1745689080' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_810301692" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - org.apache.axis:axis:jar:1.4</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+POM was created from deploy:deploy-file</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+<li>org.ostermiller:utils:jar:1.07.00 (compile) <img id="_1558194794" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1736786133', '_1558194794' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1736786133" style="display:none"><table class="bodyTable"><tr class="a"><th>Ostermiller Java Utilities</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+Open source (GPL) Java utilities maintained by Stephen Ostermiller with help from many contributors.</p>
+<p><b>URL: </b>
+<a href="http://ostermiller.org/utils/" class="externalLink">http://ostermiller.org/utils/</a>
 </p>
-<p><a name="org.apache.axis:axis:jar"><b>Unnamed - org.apache.axis:axis:jar:1.4</b>
-</a>
+<p><b>Project License: </b>
+<a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt" class="externalLink">GNU General Public License, version 2</a>
 </p>
-<p>POM was created from deploy:deploy-file</p>
-<p><a name="org.ostermiller:utils:jar"><b>Ostermiller Java Utilities</b>
-</a>
+</td>
+</tr>
+</table>
+</div></li>
+<li>commons-logging:commons-logging:jar:1.1.1 (compile) <img id="_1566163875" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1686218150', '_1566163875' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1686218150" style="display:none"><table class="bodyTable"><tr class="a"><th>Commons Logging</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+Commons Logging is a thin adapter allowing configurable bridging to other,
+    well known logging systems.</p>
+<p><b>URL: </b>
+<a href="http://commons.apache.org/logging" class="externalLink">http://commons.apache.org/logging</a>
 </p>
-<p>Open source (GPL) Java utilities maintained by Stephen Ostermiller with help from many contributors.</p>
-<p><a href="http://ostermiller.org/utils/" class="externalLink">http://ostermiller.org/utils/</a>
+<p><b>Project License: </b>
+<a href="http://www.apache.org/licenses/LICENSE-2.0.txt" class="externalLink">The Apache Software License, Version 2.0</a>
 </p>
-<p><a name="geronimo:commons-logging:jar"><b>Unnamed - geronimo:commons-logging:jar:1.0.4</b>
-</a>
-</p>
-<p><a name="com.skype:skype-full:jar"><b>Unnamed - com.skype:skype-full:jar:1.0</b>
-</a>
-</p>
-<p><a name="soap:soap:jar"><b>Unnamed - soap:soap:jar:2.3.1</b>
-</a>
-</p>
+</td>
+</tr>
+</table>
+</div></li>
+<li>com.skype:skype-full:jar:1.0 (compile) <img id="_77335082" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1328262144', '_77335082' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1328262144" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - com.skype:skype-full:jar:1.0</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+<li>soap:soap:jar:2.3.1 (compile) <img id="_524764143" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_17892957', '_524764143' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_17892957" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - soap:soap:jar:2.3.1</th>
+</tr>
+<tr class="b"><td><p><b>Description: </b>
+There is currently no description associated with this project.</p>
+<p><b>Project License: </b>
+No project license is defined for this project.</p>
+</td>
+</tr>
+</table>
+</div></li>
+</ul>
+</li>
+</ul>
 </div>
+</div>
+<div class="section"><h2>Licenses</h2>
+<p><b>GNU General Public License, version 2: </b>
+Ostermiller Java Utilities</p>
+<p><b>Unknown: </b>
+Unnamed - com.skype:skype-full:jar:1.0, Unnamed - org.apache.axis:axis:jar:1.4, Unnamed - soap:soap:jar:2.3.1</p>
+<p><b>The Apache Software License, Version 2.0: </b>
+Codec, Commons Logging</p>
+<p><b>Common Public License Version 1.0: </b>
+JUnit</p>
+<p><b>GPL: </b>
+SkypeProxy</p>
+</div>
+<div class="section"><h2>Dependency File Details</h2>
+<table class="bodyTable"><tbody><tr class="a"><th align="left">Filename</th>
+<th align="right">Size</th>
+<th align="right">Entries</th>
+<th align="right">Classes</th>
+<th align="right">Packages</th>
+<th align="center">JDK Rev</th>
+<th align="center">Debug</th>
+</tr>
+<tr class="b"><td align="left">skype-full-1.0.jar</td>
+<td align="right">258.71 kB</td>
+<td align="right">236</td>
+<td align="right">190</td>
+<td align="right">8</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><td align="left">commons-codec-1.3.jar</td>
+<td align="right">45.63 kB</td>
+<td align="right">42</td>
+<td align="right">25</td>
+<td align="right">5</td>
+<td align="center">1.2</td>
+<td align="center">debug</td>
+</tr>
+<tr class="b"><td align="left">commons-logging-1.1.1.jar</td>
+<td align="right">59.26 kB</td>
+<td align="right">42</td>
+<td align="right">28</td>
+<td align="right">2</td>
+<td align="center">1.1</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><td align="left">junit-3.8.1.jar</td>
+<td align="right">118.23 kB</td>
+<td align="right">119</td>
+<td align="right">100</td>
+<td align="right">6</td>
+<td align="center">1.1</td>
+<td align="center">debug</td>
+</tr>
+<tr class="b"><td align="left">axis-1.4.jar</td>
+<td align="right">1.53 MB</td>
+<td align="right">842</td>
+<td align="right">771</td>
+<td align="right">56</td>
+<td align="center">1.3</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><td align="left">utils-1.07.00.jar</td>
+<td align="right">513.62 kB</td>
+<td align="right">268</td>
+<td align="right">87</td>
+<td align="right">1</td>
+<td align="center">1.5</td>
+<td align="center">debug</td>
+</tr>
+<tr class="b"><td align="left">soap-2.3.1.jar</td>
+<td align="right">227.05 kB</td>
+<td align="right">153</td>
+<td align="right">130</td>
+<td align="right">18</td>
+<td align="center">1.1</td>
+<td align="center">debug</td>
+</tr>
+<tr class="a"><th align="left">Total</th>
+<th align="right">Size</th>
+<th align="right">Entries</th>
+<th align="right">Classes</th>
+<th align="right">Packages</th>
+<th align="center">JDK Rev</th>
+<th align="center">Debug</th>
+</tr>
+<tr class="b"><td align="right">7</td>
+<td align="right">2.72 MB</td>
+<td align="right">1,702</td>
+<td align="right">1,331</td>
+<td align="right">96</td>
+<td align="center">1.5</td>
+<td align="right">7</td>
+</tr>
+<tr class="a"><td align="right">compile: 7</td>
+<td align="right">compile: 2.72 MB</td>
+<td align="right">compile: 1,702</td>
+<td align="right">compile: 1,331</td>
+<td align="right">compile: 96</td>
+<td align="center">-</td>
+<td align="right">compile: 7</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section"><h2>Dependency Repository Locations</h2>
+<table class="bodyTable"><tbody><tr class="b"><th align="left">Repo ID</th>
+<th align="left">URL</th>
+<th align="center">Release</th>
+<th align="center">Snapshot</th>
+<th align="center">Blacklisted</th>
+</tr>
+<tr class="a"><td align="left">ZKgoogle</td>
+<td align="left"><a href="http://zkoss.googlecode.com/svn/release-repository/" class="externalLink">http://zkoss.googlecode.com/svn/release-repository/</a>
+</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">-</td>
+</tr>
+<tr class="b"><td align="left">central</td>
+<td align="left">http://repo1.maven.org/maven2</td>
+<td align="center">Yes</td>
+<td align="center">-</td>
+<td align="center">Yes</td>
+</tr>
+<tr class="a"><td align="left">apache.snapshots</td>
+<td align="left"><a href="http://people.apache.org/repo/m2-snapshot-repository" class="externalLink">http://people.apache.org/repo/m2-snapshot-repository</a>
+</td>
+<td align="center">-</td>
+<td align="center">Yes</td>
+<td align="center">-</td>
+</tr>
+<tr class="b"><td align="left">maven2-repository.dev.java.net</td>
+<td align="left"><a href="http://download.java.net/maven/2/" class="externalLink">http://download.java.net/maven/2/</a>
+</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">-</td>
+</tr>
+<tr class="a"><td align="left">VIP</td>
+<td align="left">https://vip.office-on-the.net/artifactory-2.0.0/repo</td>
+<td align="center">Yes</td>
+<td align="center">-</td>
+<td align="center">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Repository locations for each of the Dependencies.</p>
+<table class="bodyTable"><tbody><tr class="b"><th align="left">Artifact</th>
+<th align="center">ZKgoogle</th>
+<th align="center">apache.snapshots</th>
+<th align="center">maven2-repository.dev.java.net</th>
+</tr>
+<tr class="a"><td align="left">com.skype:skype-full:jar:1.0</td>
+<td align="center"><a href="http://zkoss.googlecode.com/svn/release-repository//com/skype/skype-full/1.0/skype-full-1.0.jar" class="externalLink"><img alt="Found at http://zkoss.googlecode.com/svn/release-repository/" src="images/icon_success_sml.gif" /></a>
+</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr class="b"><td align="left">commons-codec:commons-codec:jar:1.3</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr class="a"><td align="left">commons-logging:commons-logging:jar:1.1.1</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr class="b"><td align="left">junit:junit:jar:3.8.1</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center"><a href="http://download.java.net/maven/2//junit/junit/3.8.1/junit-3.8.1.jar" class="externalLink"><img alt="Found at http://download.java.net/maven/2/" src="images/icon_success_sml.gif" /></a>
+</td>
+</tr>
+<tr class="a"><td align="left">org.apache.axis:axis:jar:1.4</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr class="b"><td align="left">org.ostermiller:utils:jar:1.07.00</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr class="a"><td align="left">soap:soap:jar:2.3.1</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr class="b"><th align="left">Total</th>
+<th align="center">ZKgoogle</th>
+<th align="center">apache.snapshots</th>
+<th align="center">maven2-repository.dev.java.net</th>
+</tr>
+<tr class="a"><td align="left">7 (compile: 7)</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
 </div>
 
       </div>
@@ -298,7 +547,7 @@
     </div>
     <div id="footer">
       <div class="xright">&#169;  
-          2008
+          2009
     
           WWWGoogleCode
           
