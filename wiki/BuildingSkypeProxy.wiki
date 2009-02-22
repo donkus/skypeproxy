@@ -12,11 +12,11 @@ enviroment for building:
 
 = Build =
 
-#svn co <SVN_URL> skypeproxy
-#cd skypeproxy
-#mvn package
-#mvn jar:jar
+  * svn co <SVN_URL> skypeproxy
+  * cd skypeproxy
+  * mvn package
+  * mvn jar:jar
 
 = Running =
 
-#java -jar target/skypeproxy-X.X.X.jar [parms]
+  * java -jar target/skypeproxy-X.X.X.jar [parms]
