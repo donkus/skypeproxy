@@ -19,4 +19,5 @@ enviroment for building:
 
 = Running =
 
-  * java -jar target/skypeproxy-X.X.X.jar [parms]
+  * for server: srvXXX.sh | srvXXX.cmd  (win32)
+  * for client: clXXX.sh  | clXXX.cmd  (win32)
