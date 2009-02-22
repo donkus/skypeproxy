@@ -12,7 +12,7 @@ enviroment for building:
 
 = Build =
 
-  * svn co [http://skypeproxy.googlecode.com/svn/trunk/ \<SVN_URL\>] skypeproxy
+  * svn co [http://skypeproxy.googlecode.com/svn/trunk/ ] skypeproxy
   * cd skypeproxy
   * mvn package
   * mvn jar:jar
