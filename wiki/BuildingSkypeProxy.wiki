@@ -8,7 +8,7 @@ till auto-install not finished the next "steps" is reasonable to use:
 enviroment for building:
   * svn client
   * jvm >=1.5 (Sun preferable)
-  * maven 2 ( tested with  >= 2.0.9  )
+  * [http://maven.apache.org/download.html 'maven 2'] ( tested with  >= 2.0.9  )
 
 = Build =
 
