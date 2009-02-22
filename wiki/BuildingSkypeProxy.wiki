@@ -6,7 +6,7 @@ till auto-install not finished the next "steps" is reasonable to use:
 = Prerequisite =
 
 enviroment for building:
-  * svn client
+  * [http://subversion.tigris.org/getting.html#binary-packages 'svn client']
   * jvm >=1.5 ([http://java.sun.com/javase/downloads/index.jsp Sun] preferable)
   * [http://maven.apache.org/download.html 'maven 2'] ( tested with  >= 2.0.9  )
 
