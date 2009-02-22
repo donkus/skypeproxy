@@ -1,0 +1,22 @@
+#labels svnmvnjvm,Phase-Requirements
+= Introduction =
+
+till auto-install not finished the next "steps" is reasonable to use:
+
+= Prerequisite =
+
+enviroment for building:
+  * svn client
+  * jvm >=1.5 (Sun preferable)
+  * maven 2 ( tested with  >= 2.0.9  )
+
+= Build =
+
+#svn co <SVN_URL> skypeproxy
+#cd skypeproxy
+#mvn package
+#mvn jar:jar
+
+= Running =
+
+#java -jar target/skypeproxy-X.X.X.jar [parms]
