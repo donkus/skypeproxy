@@ -1,1 +1,1214 @@
-1
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>eWeek Security Watch - Enterprise Security, Desktop and PC Security Blog</title>
+<link href="http://replay.waybackmachine.org/20101002202334cs_/http://securitywatch.eweek.com/page.css" rel="stylesheet" type="text/css" />
+<META http-equiv="Refresh" CONTENT="600">
+<META http-equiv="expires" CONTENT="Thu, 01 Dec 1994 16:00:00 GMT">
+<META http-equiv="Pragma" CONTENT="no-cache">
+<META NAME="ELEMENT_ID" CONTENT="">
+<link rel="shortcut icon" href="http://replay.waybackmachine.org/20101002202334im_/http://securitywatch.eweek.com/favicon.ico" >
+<link rel="icon" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/favicon-anim.gif" type="image/gif" >
+<link rel="alternate" type="application/rss+xml" title="Security Watch RSS" href="http://replay.waybackmachine.org/20101002202334/http://feeds.ziffdavisenterprise.com/RSS/security_watch" />
+<script src="http://replay.waybackmachine.org/20101002202334js_/http://securitywatch.eweek.com/page.js" type="text/javascript"></script>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="disclaim.js" ></script>
+<script type="text/javascript" src="graph-ca.js" ></script>
+<script type="text/javascript" src="jquery00.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1325375999999;
+var wbPrefix = "http://replay.waybackmachine.org/";
+var wbCurrentUrl = "http://securitywatch.eweek.com/";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 16;
+var firstYear = 1996;
+var imgWidth=400;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "2";
+var displayMonth = "Okt";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(http://static.waybackmachine.org/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="http://waybackmachine.org/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="wayback-.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="http://waybackmachine.org/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://securitywatch.eweek.com/" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20101002202334" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="http://replay.waybackmachine.org/20100830055728/http://securitywatch.eweek.com/" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="30 Aug 2010"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 20:23:34 Okt 2, 2010">OKT</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Nov
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="http://replay.waybackmachine.org/20100830055728/http://securitywatch.eweek.com/" title="5:57:28 Aug 30, 2010" style="background-color:transparent;border:none;"><img src="wm_tb_pr.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 20:23:34 Okt 2, 2010">2</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="wm_tb_nx.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="http://replay.waybackmachine.org/20090417020411/http://securitywatch.eweek.com/" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="17 Apr 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 20:23:34 Okt 2, 2010">2010</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2011
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="http://waybackmachine.org/20101002202334*/http://securitywatch.eweek.com/" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>85 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">15 Nov 06 - 2 Okt 10</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:400px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:400px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="400"
+				height="27"
+				border="0"
+				src="http://waybackmachine.org/jsp/graph.jsp?graphdata=400_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000013_2007:-1:713113000200_2008:-1:111221de3113_2009:-1:112100000000_2010:9:000273020100_2011:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="transp-y.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="transp-r.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(http://static.waybackmachine.org/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.waybackmachine.org/" style="display:block;padding-right:18px;background:url(http://static.waybackmachine.org/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<table width="1002" border="0" align="center" cellpadding="0" cellspacing="0" id="tblPg">
+  <tr>
+    <td><img src="http://replay.waybackmachine.org/20101002202334im_/http://securitywatch.eweek.com/images/sw-header.jpg" alt="eWeek Security Watch" width="1004" usemap="#headermap" height="86" style="border:none;margin-bottom:1px" /><div id="topNavBar"><a href="http://replay.waybackmachine.org/20101002202334/http://blogs.eweek.com/" target="_blank">All Blogs</a> &#149; <a href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/" target="_blank">eWEEK</a> &#149; <a href="http://replay.waybackmachine.org/20101002202334/http://www.baselinemag.com/" target="_blank">BASELINE</a> &#149; <a href="http://replay.waybackmachine.org/20101002202334/http://www.channelinsider.com/" target="_blank">CHANNEL INSIDER</a> &#149; <a href="http://replay.waybackmachine.org/20101002202334/http://www.cioinsight.com/" target="_blank">CIO INSIGHT</a> &#149; <a href="http://replay.waybackmachine.org/20101002202334/http://www.microsoft-watch.com/" target="_blank">Microsoft WATCH</a> &#149; <a href="http://replay.waybackmachine.org/20101002202334/http://www.linux-watch.com/" target="_blank">LINUX WATCH</a> &#149; <a href="http://replay.waybackmachine.org/20101002202334/http://www.webbuyersguide.com/" target="_blank">RESOURCE LIBRARY</a></div></td>
+  </tr>
+  <tr>
+    <td><div id="topBannerContainer">
+        <div id="topBannerBig"><img src="http://replay.waybackmachine.org/20101002202334im_/http://securitywatch.eweek.com/images/advertisement.gif" alt="Advertisement" width="78" height="7" class="adSign" /><br />
+<iframe src="http://replay.waybackmachine.org/20101002202334/http://ad.doubleclick.net/adi/entzd.eweek/blog/securitywatch;sz=728x90;ord=%3Cscript%3Edocument.write(Math.random()*10000000000000000)%3C/script%3E" width="728" height="90" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="No" hspace="5"> <a href="http://replay.waybackmachine.org/20101002202334/http://ad.doubleclick.net/jump/entzd.eweek/blog/securitywatch;abr=!ie;sz=728x90;ord=%3Cscript%3Edocument.write(Math.random()*10000000000000000)%3C/script%3E" target="_top"> <img src="http://replay.waybackmachine.org/20101002202334im_/http://ad.doubleclick.net/ad/entzd.eweek/blog/securitywatch;abr=!ie;sz=728x90;ord=%3Cscript%3Edocument.write(Math.random()*10000000000000000)%3C/script%3E" border="0" height="90" width="728" hspace="5" /></a></iframe>
+
+
+
+</div>
+        <div id="topBannerSmall"><img src="http://replay.waybackmachine.org/20101002202334im_/http://securitywatch.eweek.com/images/advertisement.gif" alt="Advertisement" width="78" height="7" class="adSign" /><br />
+<iframe src="http://replay.waybackmachine.org/20101002202334/http://ad.doubleclick.net/adi/entzd.eweek/blog/securitywatch;sz=160x90;ord=%3Cscript%3Edocument.write(Math.random()*10000000000000000)%3C/script%3E" width="160" height="90" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="No" hspace="5"> <a href="http://replay.waybackmachine.org/20101002202334/http://ad.doubleclick.net/jump/entzd.eweek/blog/securitywatch;abr=!ie;sz=160x90;ord=%3Cscript%3Edocument.write(Math.random()*10000000000000000)%3C/script%3E" target="_top"> <img src="http://replay.waybackmachine.org/20101002202334im_/http://ad.doubleclick.net/ad/entzd.eweek/blog/securitywatch;abr=!ie;sz=160x90;ord=%3Cscript%3Edocument.write(Math.random()*10000000000000000)%3C/script%3E" border="0" height="90" width="160" hspace="5" /></a></iframe>
+
+</div>
+      </div>
+      <div id="topSearchBar">
+        <div id="topSearchForm">
+ <form id="topSearch" name="topSearch" method="get" action="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/cgi-bin/mte/mt-search.cgi">      
+<input type="hidden" value="13" name="IncludeBlogs">
+            <input name="search" type="text" id="search" size="30" />
+<input type="image" name="submit" href="javascript document.topSearch.submit();" src="http://replay.waybackmachine.org/20101002202334im_/http://securitywatch.eweek.com/images/searchBar-button.gif" alt="Submit" border="0" width="66" height="24" style="vertical-align: middle;margin-left:4px;border:none;">
+          </form>
+        </div>
+        <div id="topSearchLinks"><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/index.html">Home</a> | <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/gotatip.php">Got a Tip?</a> | <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/sitemap.php">Archive</a> | <a href="http://replay.waybackmachine.org/20101002202334/http://blogs.eweek.com/" target="_blank">All Blogs</a> | <a href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/category2/0,2662,2208972,00.asp" id="topBarPromo">eWeek Newsbreak</a></div>
+      </div></td></tr><tr><td>     <div id="contentCont">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" >
+          <tr>
+            <td width="653" valign="top">
+
+				<div class="ltContent">
+                                                                
+                                                                <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://securitywatch.eweek.com/malware/stuxnet_used_in_black_hat_seo_campaigns.html"
+    trackback:ping="http://securitywatch.eweek.com/cgi-bin/mte/mt-tb.cgi/21147"
+    dc:title="Stuxnet Used in Black Hat SEO Campaigns"
+    dc:identifier="http://securitywatch.eweek.com/malware/stuxnet_used_in_black_hat_seo_campaigns.html"
+    dc:subject="Malware"
+    dc:description="Attackers are taking advantage of interest in the Stuxnet worm to lure users to malicious sites."
+    dc:creator="Brian Prince"
+    dc:date="2010-10-01T14:49:42-05:00" />
+</rdf:RDF>
+-->
+
+				  <div class="entry">
+				<span class="date">
+                                                             Friday, October  01, 2010  2:49 PM/EST</span>					
+					<h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware/stuxnet_used_in_black_hat_seo_campaigns.html">Stuxnet Used in Black Hat SEO Campaigns</a></h1>
+					<p>Attackers are taking advantage of interest in the Stuxnet worm to lure users to malicious sites.</p>
+<div class="entryLinks"><a class="readmore" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware/stuxnet_used_in_black_hat_seo_campaigns.html#more">Read more...</a> | <a class="commentButton" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware/stuxnet_used_in_black_hat_seo_campaigns.html#comments">Comment (0)</a>  | 
+<a class="deliciousButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://del.icio.us/post?url=http://securitywatch.eweek.com/malware/stuxnet_used_in_black_hat_seo_campaigns.html&title=Stuxnet%20Used%20in%20Black%20Hat%20SEO%20Campaigns"> del.icio.us</a> | <a class="diggButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://digg.com/submit?phase=2&url=http://securitywatch.eweek.com/malware/stuxnet_used_in_black_hat_seo_campaigns.html&title=Stuxnet%20Used%20in%20Black%20Hat%20SEO%20Campaigns">digg.com</a>
+<div style="margin-top:2px;font-size:11px;">View all of <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware/">Malware</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/seo_poisoning/">SEO poisoning</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/social_engineering/">Social engineering</a></div></div></div>
+
+                                                                <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://securitywatch.eweek.com/google/google_adds_malware_alert_for_network_administrators.html"
+    trackback:ping="http://securitywatch.eweek.com/cgi-bin/mte/mt-tb.cgi/21133"
+    dc:title="Google Adds Malware Alert for Network Administrators"
+    dc:identifier="http://securitywatch.eweek.com/google/google_adds_malware_alert_for_network_administrators.html"
+    dc:subject="Google"
+    dc:description="Gogle has added a new alert service for detecting compromised or malicious sites."
+    dc:creator="Brian Prince"
+    dc:date="2010-09-30T10:40:23-05:00" />
+</rdf:RDF>
+-->
+
+				  <div class="entry">
+				<span class="date">
+                                                             Thursday, September  30, 2010 10:40 AM/EST</span>					
+					<h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/google/google_adds_malware_alert_for_network_administrators.html">Google Adds Malware Alert for Network Administrators</a></h1>
+					<p>Gogle has added a new alert service for detecting compromised or malicious sites.</p>
+<div class="entryLinks"><a class="readmore" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/google/google_adds_malware_alert_for_network_administrators.html#more">Read more...</a> | <a class="commentButton" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/google/google_adds_malware_alert_for_network_administrators.html#comments">Comment (0)</a>  | 
+<a class="deliciousButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://del.icio.us/post?url=http://securitywatch.eweek.com/google/google_adds_malware_alert_for_network_administrators.html&title=Google%20Adds%20Malware%20Alert%20for%20Network%20Administrators"> del.icio.us</a> | <a class="diggButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://digg.com/submit?phase=2&url=http://securitywatch.eweek.com/google/google_adds_malware_alert_for_network_administrators.html&title=Google%20Adds%20Malware%20Alert%20for%20Network%20Administrators">digg.com</a>
+<div style="margin-top:2px;font-size:11px;">View all of <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/google/">Google</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware/">Malware</a></div></div></div>
+
+                                                                <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://securitywatch.eweek.com/web_20/web_20_security_losses_total_11_billion_survey_finds.html"
+    trackback:ping="http://securitywatch.eweek.com/cgi-bin/mte/mt-tb.cgi/21123"
+    dc:title="Web 2.0 Security Losses Total $1.1 Billion, Survey Finds"
+    dc:identifier="http://securitywatch.eweek.com/web_20/web_20_security_losses_total_11_billion_survey_finds.html"
+    dc:subject="Web 2.0"
+    dc:description="A new report commissioned by McAfee found organizations around the world are adopting social media technology, but the adoption rates are bringing with them their own sets of security concerns."
+    dc:creator="Brian Prince"
+    dc:date="2010-09-28T13:38:04-05:00" />
+</rdf:RDF>
+-->
+
+				  <div class="entry">
+				<span class="date">
+                                                             Tuesday, September  28, 2010  1:38 PM/EST</span>					
+					<h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/web_20/web_20_security_losses_total_11_billion_survey_finds.html">Web 2.0 Security Losses Total $1.1 Billion, Survey Finds</a></h1>
+					<p>A new report commissioned by McAfee found organizations around the world are adopting social media technology, but the adoption rates are bringing with them their own sets of security concerns.</p>
+<div class="entryLinks"><a class="readmore" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/web_20/web_20_security_losses_total_11_billion_survey_finds.html#more">Read more...</a> | <a class="commentButton" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/web_20/web_20_security_losses_total_11_billion_survey_finds.html#comments">Comment (0)</a>  | 
+<a class="deliciousButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://del.icio.us/post?url=http://securitywatch.eweek.com/web_20/web_20_security_losses_total_11_billion_survey_finds.html&title=Web%202.0%20Security%20Losses%20Total%20%241.1%20Billion%2C%20Survey%20Finds"> del.icio.us</a> | <a class="diggButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://digg.com/submit?phase=2&url=http://securitywatch.eweek.com/web_20/web_20_security_losses_total_11_billion_survey_finds.html&title=Web%202.0%20Security%20Losses%20Total%20%241.1%20Billion%2C%20Survey%20Finds">digg.com</a>
+<div style="margin-top:2px;font-size:11px;">View all of <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/facebook/">Facebook</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/web_20/">Web 2.0</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/youtube/">YouTube</a></div></div></div>
+
+                                                                <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://securitywatch.eweek.com/microsoft/microsoft_adds_to_aspnet_vulnerability_advisory.html"
+    trackback:ping="http://securitywatch.eweek.com/cgi-bin/mte/mt-tb.cgi/21113"
+    dc:title="Microsoft Adds to ASP.NET Vulnerability Advisory"
+    dc:identifier="http://securitywatch.eweek.com/microsoft/microsoft_adds_to_aspnet_vulnerability_advisory.html"
+    dc:subject="Microsoft"
+    dc:description="Microsoft has added information to its advisory on the ASP.NET vulnerability to help while the company prepares a patch."
+    dc:creator="Brian Prince"
+    dc:date="2010-09-25T11:26:32-05:00" />
+</rdf:RDF>
+-->
+
+				  <div class="entry">
+				<span class="date">
+                                                             Saturday, September  25, 2010 11:26 AM/EST</span>					
+					<h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/microsoft/microsoft_adds_to_aspnet_vulnerability_advisory.html">Microsoft Adds to ASP.NET Vulnerability Advisory</a></h1>
+					<p>Microsoft has added information to its advisory on the ASP.NET vulnerability to help while the company prepares a patch.</p>
+<div class="entryLinks"><a class="readmore" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/microsoft/microsoft_adds_to_aspnet_vulnerability_advisory.html#more">Read more...</a> | <a class="commentButton" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/microsoft/microsoft_adds_to_aspnet_vulnerability_advisory.html#comments">Comment (0)</a>  | 
+<a class="deliciousButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://del.icio.us/post?url=http://securitywatch.eweek.com/microsoft/microsoft_adds_to_aspnet_vulnerability_advisory.html&title=Microsoft%20Adds%20to%20ASP.NET%20Vulnerability%20Advisory"> del.icio.us</a> | <a class="diggButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://digg.com/submit?phase=2&url=http://securitywatch.eweek.com/microsoft/microsoft_adds_to_aspnet_vulnerability_advisory.html&title=Microsoft%20Adds%20to%20ASP.NET%20Vulnerability%20Advisory">digg.com</a>
+<div style="margin-top:2px;font-size:11px;">View all of <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/exploits/">Exploits and Attacks</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/microsoft_1/">Microsoft</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/microsoft/">Microsoft Windows</a></div></div></div>
+
+                                                                <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://securitywatch.eweek.com/online_malware/inside_pdf_malware_attacks.html"
+    trackback:ping="http://securitywatch.eweek.com/cgi-bin/mte/mt-tb.cgi/21091"
+    dc:title="Inside PDF Malware Attacks"
+    dc:identifier="http://securitywatch.eweek.com/online_malware/inside_pdf_malware_attacks.html"
+    dc:subject="Online malware"
+    dc:description="Researchers at Symantec take a long look at the PDF malware circulating the Net. "
+    dc:creator="Brian Prince"
+    dc:date="2010-09-21T17:00:24-05:00" />
+</rdf:RDF>
+-->
+
+				  <div class="entry">
+				<span class="date">
+                                                             Tuesday, September  21, 2010  5:00 PM/EST</span>					
+					<h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/online_malware/inside_pdf_malware_attacks.html">Inside PDF Malware Attacks</a></h1>
+					<p>Researchers at Symantec take a long look at the PDF malware circulating the Net. </p>
+<div class="entryLinks"><a class="readmore" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/online_malware/inside_pdf_malware_attacks.html#more">Read more...</a> | <a class="commentButton" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/online_malware/inside_pdf_malware_attacks.html#comments">Comment (0)</a>  | 
+<a class="deliciousButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://del.icio.us/post?url=http://securitywatch.eweek.com/online_malware/inside_pdf_malware_attacks.html&title=Inside%20PDF%20Malware%20Attacks"> del.icio.us</a> | <a class="diggButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://digg.com/submit?phase=2&url=http://securitywatch.eweek.com/online_malware/inside_pdf_malware_attacks.html&title=Inside%20PDF%20Malware%20Attacks">digg.com</a>
+<div style="margin-top:2px;font-size:11px;">View all of <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/exploits/">Exploits and Attacks</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/online_malware/">Online malware</a></div></div></div>
+
+                                                                <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://securitywatch.eweek.com/phishing_and_fraud/mcafee_finds_phishing_scam_using_tax_system_as_bait.html"
+    trackback:ping="http://securitywatch.eweek.com/cgi-bin/mte/mt-tb.cgi/21075"
+    dc:title="McAfee Finds Phishing Scam Using Tax System as Bait"
+    dc:identifier="http://securitywatch.eweek.com/phishing_and_fraud/mcafee_finds_phishing_scam_using_tax_system_as_bait.html"
+    dc:subject="Phishing and Fraud"
+    dc:description="McAfee reported phishers using the U.S. Department of Treasury&apos;s Electronic Federal Tax Payment System (EFTPS) as a way to rope victims into giving up information. 
+
+"
+    dc:creator="Brian Prince"
+    dc:date="2010-09-18T10:07:53-05:00" />
+</rdf:RDF>
+-->
+
+				  <div class="entry">
+				<span class="date">
+                                                             Saturday, September  18, 2010 10:07 AM/EST</span>					
+					<h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/phishing_and_fraud/mcafee_finds_phishing_scam_using_tax_system_as_bait.html">McAfee Finds Phishing Scam Using Tax System as Bait</a></h1>
+					<p>McAfee reported phishers using the U.S. Department of Treasury's Electronic Federal Tax Payment System (EFTPS) as a way to rope victims into giving up information. 
+
+</p>
+<div class="entryLinks"><a class="readmore" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/phishing_and_fraud/mcafee_finds_phishing_scam_using_tax_system_as_bait.html#more">Read more...</a> | <a class="commentButton" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/phishing_and_fraud/mcafee_finds_phishing_scam_using_tax_system_as_bait.html#comments">Comment (1)</a>  | 
+<a class="deliciousButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://del.icio.us/post?url=http://securitywatch.eweek.com/phishing_and_fraud/mcafee_finds_phishing_scam_using_tax_system_as_bait.html&title=McAfee%20Finds%20Phishing%20Scam%20Using%20Tax%20System%20as%20Bait"> del.icio.us</a> | <a class="diggButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://digg.com/submit?phase=2&url=http://securitywatch.eweek.com/phishing_and_fraud/mcafee_finds_phishing_scam_using_tax_system_as_bait.html&title=McAfee%20Finds%20Phishing%20Scam%20Using%20Tax%20System%20as%20Bait">digg.com</a>
+<div style="margin-top:2px;font-size:11px;">View all of <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/exploits/">Exploits and Attacks</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/phishing_and_fraud/">Phishing and Fraud</a></div></div></div>
+
+                                                                <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://securitywatch.eweek.com/apple/apple_plugs_quicktime_vulnerabilities.html"
+    trackback:ping="http://securitywatch.eweek.com/cgi-bin/mte/mt-tb.cgi/21056"
+    dc:title="Apple Plugs QuickTime Vulnerabilities"
+    dc:identifier="http://securitywatch.eweek.com/apple/apple_plugs_quicktime_vulnerabilities.html"
+    dc:subject="Apple"
+    dc:description="Apple updated QuickTime to patch two vulnerabilities affecting customers running the program on Windows."
+    dc:creator="Brian Prince"
+    dc:date="2010-09-15T23:26:35-05:00" />
+</rdf:RDF>
+-->
+
+				  <div class="entry">
+				<span class="date">
+                                                             Wednesday, September  15, 2010 11:26 PM/EST</span>					
+					<h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/apple/apple_plugs_quicktime_vulnerabilities.html">Apple Plugs QuickTime Vulnerabilities</a></h1>
+					<p>Apple updated QuickTime to patch two vulnerabilities affecting customers running the program on Windows.</p>
+<div class="entryLinks"><a class="readmore" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/apple/apple_plugs_quicktime_vulnerabilities.html#more">Read more...</a> | <a class="commentButton" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/apple/apple_plugs_quicktime_vulnerabilities.html#comments">Comment (0)</a>  | 
+<a class="deliciousButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://del.icio.us/post?url=http://securitywatch.eweek.com/apple/apple_plugs_quicktime_vulnerabilities.html&title=Apple%20Plugs%20QuickTime%20Vulnerabilities"> del.icio.us</a> | <a class="diggButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://digg.com/submit?phase=2&url=http://securitywatch.eweek.com/apple/apple_plugs_quicktime_vulnerabilities.html&title=Apple%20Plugs%20QuickTime%20Vulnerabilities">digg.com</a>
+<div style="margin-top:2px;font-size:11px;">View all of <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/apple/">Apple</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/patches/">Patches</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/vulnerability_research/">Vulnerability Research</a></div></div></div>
+
+                                                                <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://securitywatch.eweek.com/malware/rsa_shows_costs_of_cyber_underground.html"
+    trackback:ping="http://securitywatch.eweek.com/cgi-bin/mte/mt-tb.cgi/21044"
+    dc:title="RSA Reports Price of Hacker Goods and Services "
+    dc:identifier="http://securitywatch.eweek.com/malware/rsa_shows_costs_of_cyber_underground.html"
+    dc:subject="Malware"
+    dc:description="Researchers at RSA, EMC&apos;s security division, took a stroll along the shopping lanes of the cyber-underworld. What they found may surprise you."
+    dc:creator="Brian Prince"
+    dc:date="2010-09-13T21:47:14-05:00" />
+</rdf:RDF>
+-->
+
+				  <div class="entry">
+				<span class="date">
+                                                             Monday, September  13, 2010  9:47 PM/EST</span>					
+					<h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware/rsa_shows_costs_of_cyber_underground.html">RSA Reports Price of Hacker Goods and Services </a></h1>
+					<p>Researchers at RSA, EMC's security division, took a stroll along the shopping lanes of the cyber-underworld. What they found may surprise you.</p>
+<div class="entryLinks"><a class="readmore" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware/rsa_shows_costs_of_cyber_underground.html#more">Read more...</a> | <a class="commentButton" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware/rsa_shows_costs_of_cyber_underground.html#comments">Comment (0)</a>  | 
+<a class="deliciousButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://del.icio.us/post?url=http://securitywatch.eweek.com/malware/rsa_shows_costs_of_cyber_underground.html&title=RSA%20Reports%20Price%20of%20Hacker%20Goods%20and%20Services%20"> del.icio.us</a> | <a class="diggButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://digg.com/submit?phase=2&url=http://securitywatch.eweek.com/malware/rsa_shows_costs_of_cyber_underground.html&title=RSA%20Reports%20Price%20of%20Hacker%20Goods%20and%20Services%20">digg.com</a>
+<div style="margin-top:2px;font-size:11px;">View all of <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware/">Malware</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware_toolkits/">Malware toolkits</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/e-banking_fraud/">e-banking fraud</a></div></div></div>
+
+                                                                <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://securitywatch.eweek.com/phishing_and_fraud/panda_security_scammers_create_57000_fake_websites_per_week.html"
+    trackback:ping="http://securitywatch.eweek.com/cgi-bin/mte/mt-tb.cgi/21025"
+    dc:title="Panda Security: Fake eBay Sites Favorites for Cyber-criminals"
+    dc:identifier="http://securitywatch.eweek.com/phishing_and_fraud/panda_security_scammers_create_57000_fake_websites_per_week.html"
+    dc:subject="Phishing and Fraud"
+    dc:description="New research from Panda Security shows eBay and Western Union are among the favorite sites for cyber-criminals to try to emulate for their schemes."
+    dc:creator="Brian Prince"
+    dc:date="2010-09-09T13:39:47-05:00" />
+</rdf:RDF>
+-->
+
+				  <div class="entry">
+				<span class="date">
+                                                             Thursday, September  09, 2010  1:39 PM/EST</span>					
+					<h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/phishing_and_fraud/panda_security_scammers_create_57000_fake_websites_per_week.html">Panda Security: Fake eBay Sites Favorites for Cyber-criminals</a></h1>
+					<p>New research from Panda Security shows eBay and Western Union are among the favorite sites for cyber-criminals to try to emulate for their schemes.</p>
+<div class="entryLinks"><a class="readmore" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/phishing_and_fraud/panda_security_scammers_create_57000_fake_websites_per_week.html#more">Read more...</a> | <a class="commentButton" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/phishing_and_fraud/panda_security_scammers_create_57000_fake_websites_per_week.html#comments">Comment (1)</a>  | 
+<a class="deliciousButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://del.icio.us/post?url=http://securitywatch.eweek.com/phishing_and_fraud/panda_security_scammers_create_57000_fake_websites_per_week.html&title=Panda%20Security%3A%20Fake%20eBay%20Sites%20Favorites%20for%20Cyber-criminals"> del.icio.us</a> | <a class="diggButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://digg.com/submit?phase=2&url=http://securitywatch.eweek.com/phishing_and_fraud/panda_security_scammers_create_57000_fake_websites_per_week.html&title=Panda%20Security%3A%20Fake%20eBay%20Sites%20Favorites%20for%20Cyber-criminals">digg.com</a>
+<div style="margin-top:2px;font-size:11px;">View all of <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/exploits/">Exploits and Attacks</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/phishing_and_fraud/">Phishing and Fraud</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/social_engineering/">Social engineering</a></div></div></div>
+
+                                                                <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://securitywatch.eweek.com/rogue_av/microsoft_warns_of_rogue_antivirus_attack.html"
+    trackback:ping="http://securitywatch.eweek.com/cgi-bin/mte/mt-tb.cgi/21010"
+    dc:title="Microsoft Warns of Rogue Antivirus Attack"
+    dc:identifier="http://securitywatch.eweek.com/rogue_av/microsoft_warns_of_rogue_antivirus_attack.html"
+    dc:subject="Rogue AV"
+    dc:description="Microsoft is warning users about a new fake AV program that mimics warnings generated by popular browsers as well as the Microsoft Security Essentials Web page. "
+    dc:creator="Brian Prince"
+    dc:date="2010-09-07T09:34:05-05:00" />
+</rdf:RDF>
+-->
+
+				  <div class="entry">
+				<span class="date">
+                                                             Tuesday, September  07, 2010  9:34 AM/EST</span>					
+					<h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/rogue_av/microsoft_warns_of_rogue_antivirus_attack.html">Microsoft Warns of Rogue Antivirus Attack</a></h1>
+					<p>Microsoft is warning users about a new fake AV program that mimics warnings generated by popular browsers as well as the Microsoft Security Essentials Web page. </p>
+<div class="entryLinks"><a class="readmore" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/rogue_av/microsoft_warns_of_rogue_antivirus_attack.html#more">Read more...</a> | <a class="commentButton" href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/rogue_av/microsoft_warns_of_rogue_antivirus_attack.html#comments">Comment (2)</a>  | 
+<a class="deliciousButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://del.icio.us/post?url=http://securitywatch.eweek.com/rogue_av/microsoft_warns_of_rogue_antivirus_attack.html&title=Microsoft%20Warns%20of%20Rogue%20Antivirus%20Attack"> del.icio.us</a> | <a class="diggButton" target="_blank" href="http://replay.waybackmachine.org/20101002202334/http://digg.com/submit?phase=2&url=http://securitywatch.eweek.com/rogue_av/microsoft_warns_of_rogue_antivirus_attack.html&title=Microsoft%20Warns%20of%20Rogue%20Antivirus%20Attack">digg.com</a>
+<div style="margin-top:2px;font-size:11px;">View all of <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/browsers/">Browsers</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware/">Malware</a>, <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/rogue_av/">Rogue AV</a></div></div></div>
+
+
+<div id="paging-container">
+<span id="paging-num" style="border-left:0px;"><span style="color: #999;cursor:default;">Viewing articles:</span> <strong>1 - 10</strong></span>
+  <span id="paging-next"><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/entry/10">Next</a></span>
+</div>
+
+
+
+<div id="googlemp">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6422417422167576";
+//SecurityWatch 336x280, created 1/24/08
+google_ad_slot = "2392902000";
+google_ad_width = 336;
+google_ad_height = 280;
+//--></script>
+<script type="text/javascript"
+src="http://replay.waybackmachine.org/20101002202334js_/http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div></div>
+</div>
+<div id="ltRSSttl"><img src="http://replay.waybackmachine.org/20101002202334im_/http://securitywatch.eweek.com/images/bottom-rss.gif" alt="RSS Syndication" name="imgTtl" width="76" height="10" /></div>
+              <div id="ltRSS">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="30%" valign="top">Subscribe:
+                      <div style="margin-top:6px;"> <a href="http://replay.waybackmachine.org/20101002202334/http://feeds.ziffdavisenterprise.com/RSS/security_watch" class="rssButton">RSS 2.0</a></div></td>
+
+                    <td width="70%" valign="top">Related Blogs:
+                      <div style="margin-top:6px;"> <a href="http://replay.waybackmachine.org/20101002202334/http://blogs.eweek.com/" class="rssButton">eWEEK</a> <a href="http://replay.waybackmachine.org/20101002202334/http://www.cioinsight.com/" class="rssButton">CIO Insight </a> <a href="http://replay.waybackmachine.org/20101002202334/http://googlewatch.eweek.com/watch/google/default.aspx" class="rssButton">Google Watch </a><a class="rssButton" href="http://replay.waybackmachine.org/20101002202334/http://www.microsoft-watch.com/">Microsoft Watch</a></div>
+
+</td>
+                  </tr>
+                </table> 
+              </div></td>
+            <td width="342" valign="top">
+<div class="rtBlueContainer">
+<h2><a href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Security/">Security News</a></h2>
+
+<ul><li><a href="http://replay.waybackmachine.org/20101002202334/http://feedproxy.google.com/~r/RSS/eweeksecurity/~3/3nu7LsTeyH4/">Microsoft Expands Distribution for ASP.NET Security Update</a></li><li><a href="http://replay.waybackmachine.org/20101002202334/http://feedproxy.google.com/~r/RSS/eweeksecurity/~3/pkq1ty8g3N4/">McAfee Examines Botnet Use of Social Networks, Web 2.0</a></li><li><a href="http://replay.waybackmachine.org/20101002202334/http://feedproxy.google.com/~r/RSS/eweeksecurity/~3/EquHM6Rllr4/">eWEEK Deeper Thinking Security</a></li><li><a href="http://replay.waybackmachine.org/20101002202334/http://feedproxy.google.com/~r/RSS/eweeksecurity/~3/UUt5irFVHDo/">Adobe Readies Reader, Acrobat Security Patches</a></li><li><a href="http://replay.waybackmachine.org/20101002202334/http://feedproxy.google.com/~r/RSS/eweeksecurity/~3/ld6K8opAyAw/">Stuxnet Malware Attack Speculation Leans Toward Israel</a></li><li><a href="http://replay.waybackmachine.org/20101002202334/http://feedproxy.google.com/~r/RSS/eweeksecurity/~3/A-AkS6lAl_c/">FBI Charges 37 in Zeus-Related Bank Heist</a></li><li><a href="http://replay.waybackmachine.org/20101002202334/http://feedproxy.google.com/~r/RSS/eweeksecurity/~3/Q1ykfsH_eTw/">Cyber-security Hurts Federal Government Productivity, Survey Says</a></li><li><a href="http://replay.waybackmachine.org/20101002202334/http://feedproxy.google.com/~r/RSS/eweeksecurity/~3/wJol4LyZnfw/">How to Securely Exchange Massive, Business-Critical Files</a></li><li><a href="http://replay.waybackmachine.org/20101002202334/http://feedproxy.google.com/~r/RSS/eweeksecurity/~3/rdal0qv7SaA/">Stuxnet Worm: Nine Facts Every IT Security Pro Should Know </a></li><li><a href="http://replay.waybackmachine.org/20101002202334/http://feedproxy.google.com/~r/RSS/eweeksecurity/~3/uKwVDt00LuA/">U.K. Police Bust 19 for $9.5M Online Banking Heist</a></li></ul>
+
+</div>
+
+<div id="rtBannerMPU"><img src="http://replay.waybackmachine.org/20101002202334im_/http://securitywatch.eweek.com/images/advertisement.gif" alt="Advertisement" width="78" height="7" class="adSign" style="text-align: left" /><br />
+	<div style="padding-left:4px;">
+      <iframe src="http://replay.waybackmachine.org/20101002202334/http://ad.doubleclick.net/adi/entzd.eweek/blog/securitywatch;sz=336x280;tile=1;ord=%3Cscript%3Edocument.write(Math.random()*10000000000000000)%3C/script%3E" width="336" height="280" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="No" hspace="5"> <a href="http://replay.waybackmachine.org/20101002202334/http://ad.doubleclick.net/jump/entzd.eweek/blog/securitywatch;abr=!ie;sz=336x280;tile=1;ord=%3Cscript%3Edocument.write(Math.random()*10000000000000000)%3C/script%3E" target="_top"> <img src="http://replay.waybackmachine.org/20101002202334im_/http://ad.doubleclick.net/ad/entzd.eweek/blog/securitywatch;abr=!ie;sz=336x280;tile=1;ord=%3Cscript%3Edocument.write(Math.random()*10000000000000000)%3C/script%3E" border="0" height="280" width="336" hspace="5" /></a></iframe>
+    </div>
+</div>
+
+
+<div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/tld_regulation/"> TLD regulation</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/adware/">Adware</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/android/">Android</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/apple/">Apple</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/applications_whitelisting/">Applications Whitelisting</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/av_tools/">AV tools</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/backdoor/">Backdoor</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/blackberry/">BlackBerry</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/blacklisting/">Blacklisting</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/blended_attack/">Blended attack</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/botnet_cncs/">Botnet CnCs</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/botnets/">Botnets</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/browsers/">Browsers</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/cag/">CAG</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/china/">China</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/cisco/">Cisco</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/click_fraud/">click fraud</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/conficker/">Conficker</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/corporate_espionage/">Corporate espionage</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/cyber-war/">Cyber-war</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/data_security/">Data Security</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/data_securityadd_category/">Data securityAdd category</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/database_security/">Database security</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/ddos/">DDoS</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/disaster_planning/">Disaster Planning</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/domain_registration_abuse/">domain registration abuse</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/e-banking_fraud/">e-banking fraud</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/ebay/">eBay</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/enterprise_security_strategy/">Enterprise security strategy</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/ethical_hacking/">Ethical hacking</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/exploits/">Exploits and Attacks</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/facebook/">Facebook</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/file-sharing/">File-sharing</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/flaws/">Flaws</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/google/">Google</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/government_standards/">Government standards</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/hactivism/">Hactivism</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/id_theft/">ID theft</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/identity_fraud/">Identity fraud</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/identity_theft/">Identity Theft</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/iframe/">iframe</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/illegal_pharmacies/">Illegal pharmacies</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/industry_events/">Industry events</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/infrastructure_security/">Infrastructure security</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/internet_regulation/">Internet regulation</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/intrusion_detectionprevention/">Intrusion Detection/Prevention</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/iphone/">iPhone</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/isps/">ISPs</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/java/">Java</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/maawg/">MAAWG</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware/">Malware</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/malware_toolkits/">Malware toolkits</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/mergers_and_acquisitions/">Mergers and Acquisitions</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/messaging_security/">Messaging security</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/microsoft_1/">Microsoft</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/microsoft/">Microsoft Windows</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/mobile_malware/">Mobile malware</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/multimedia/">multimedia </a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/nist/">NIST</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/online_malware/">Online malware</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/open_source/">Open Source</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/oracle/">Oracle</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/patches/">Patches</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/phishing_and_fraud/">Phishing and Fraud</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/powerpoint/">PowerPoint</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/privacy/">Privacy</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/product_reviews/">Product Reviews</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/products/">Products</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/regulation/">Regulation</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/risk_management/">Risk Management</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/rogue_av/">Rogue AV</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/rootkits/">Rootkits</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/rsa_security_conference/">RSA Security Conference</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/saas/">SaaS</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/scada/">SCADA</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/search/">Search</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/seo/">SEO</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/seo_poisoning/">SEO poisoning</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/smartphone_security/">Smartphone security</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/social_engineering/">Social engineering</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/social_networking/">Social networking</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/spam/">Spam</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/sql_injection/">SQL injection</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/trojan_attacks/">Trojan attacks</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/twitter/">Twitter</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/video_games/">video games</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/spyware/">Virus and Spyware</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/vulnerability_research/">Vulnerability Research</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/web_20/">Web 2.0</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/windows_7/">Windows 7</a></h1>
+              </div>
+
+              <div class="rtRedContainer">
+                <h1><a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/youtube/">YouTube</a></h1>
+              </div>
+
+
+<div id="rtBannerMPU" style="margin-top:4px;"><img src="http://replay.waybackmachine.org/20101002202334im_/http://securitywatch.eweek.com/images/advertisement.gif" alt="Advertisement" width="78" height="7" class="adSign" style="text-align: left" /><br />
+  <div style="padding-left:4px;">
+    <iframe src="http://replay.waybackmachine.org/20101002202334/http://ad.doubleclick.net/adi/entzd.eweek/blog/securitywatch;sz=336x280;tile=2;ord=%3Cscript%3Edocument.write(Math.random()*10000000000000000)%3C/script%3E" width="336" height="280" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="No" hspace="5"> <a href="http://replay.waybackmachine.org/20101002202334/http://ad.doubleclick.net/jump/entzd.eweek/blog/securitywatch;abr=!ie;sz=336x280;tile=2;ord=%3Cscript%3Edocument.write(Math.random()*10000000000000000)%3C/script%3E" target="_top"> <img src="http://replay.waybackmachine.org/20101002202334im_/http://ad.doubleclick.net/ad/entzd.eweek/blog/securitywatch;abr=!ie;sz=336x280;tile=2;ord=%3Cscript%3Edocument.write(Math.random()*10000000000000000)%3C/script%3E" border="0" height="280" width="336" hspace="5" /></a></iframe>
+  </div>
+</div>
+
+
+
+</td>
+          </tr>
+        </table>
+      </div>
+<div id="footer1">Security Watch &nbsp; &nbsp; <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/contact.php">Contact Us</a> | <a href="http://replay.waybackmachine.org/20101002202334/http://www.ziffdavisenterpriseonline.com/advertise/overview">Advertise</a> | <a href="http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/sitemap.php">Site Map</a></div>
+</td>
+</tr>
+<tr>
+  <td><div id="footer2" style="padding: 12px;">
+<table cellspacing="0" cellpadding="0" bordercolor="#ff0000" border="0" _base_href="http://www.eweek.com/" style="border:0px;">
+ <tr _base_href="http://www.eweek.com/">
+  <td valign="top" align="center" _base_href="http://www.eweek.com/" style="padding: 7px; width: 120px;"><img width="108" height="21" border="0" _base_href="http://www.eweek.com/" title="eWEEK Quick LInks" alt="eWEEK Quick LInks" src="http://replay.waybackmachine.org/20101002202334im_/http://www.channelinsider.com/images/careers/quicklinks.gif"/></td>
+  <td _base_href="http://www.eweek.com/">
+<p style="margin-top: 5px;" class="Footer_Text">
+</p><div class="footerbox"><strong>Security:</strong><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Security/">Enterprise Security</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Enterprise-Networking/">Network Security</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/IT-Infrastructure/">Infrastructure Security</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/a/Security/How-to-Avoid-the-Next-Data-Breach/">How To: Data</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Security/News/">IT Security News</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://blogs.eweek.com/cheap_hack/">Cheap Hack Blog</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="">Security Watch Blog</a><br/></div>
+
+<div class="footerbox"><strong>Storage:</strong><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Data-Storage/">Data Storage</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Cloud-Computing/">Cloud Storage</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Virtualization/">Storage Virtualization</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.scalablenasroom.com/">Network Access Storage</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Data-Storage/Reviews/">Storage Reviews</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Data-Storage/News/">Data Storage News</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/a/Enterprise-Applications/How-to-Discover-the-Hidden-Meaning-in-Unstructured-Data/">How To: Storage</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://blogs.eweek.com/storage_station/">Storage Station Blog</a><br/></div>
+
+<div class="footerbox"><strong>Computing:</strong><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Apple/">Apple OSX</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Linux-and-Open-Source/">Linux Systems</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Windows/">Windows Vista</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Printers/">Managed Print Services</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Cloud-Computing/">Cloud Computing</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Desktops-and-Notebooks/">PC Reviews</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.microsoft-watch.com/">Microsoft Watch Blog</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://blogs.eweek.com/applewatch">Apple Watch Blog</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://googlewatch.eweek.com/">Google Watch Blog</a><br/></div>
+
+<div class="footerbox"><strong>Communications:</strong><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/VOIP-and-Telephony/">VoIP Solutions</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Mobile-and-Wireless/">Wireless Technology</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Messaging-and-Collaboration/">Messaging Software</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Web-Services-Web-20-and-SOA/">Web Services</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Cloud-Computing/">Mobile Applications</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Mobile-and-Wireless/News/">Wireless News</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Mobile-and-Wireless/Reviews/">Mobile Reviews</a><br/></div>
+
+<div class="footerbox"><strong>Apps & Development:</strong><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Application-Development/">Application Development</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Enterprise-Applications/">SAAS</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Search-Engines/">Search Engines</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Database/">Database Software</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Web-Services-Web-20-and-SOA/">Web 2.0</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/IT-Management/">IT Project Management</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://etech.eweek.com/">Emerging Tech Blog</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://blogs.cioinsight.com/">CIO Insight Blogs</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.cioinsight.com/">CIOs</a><br/></div>
+<p/></td>
+</tr><tr _base_href="http://www.eweek.com/"><td valign="top" _base_href="http://www.eweek.com/"><a _base_href="http://www.eweek.com/" class="Footer_ZD" title="Ziff Davis Enterprise Inc." name="Ziff Davis Enterprise Inc." href="http://replay.waybackmachine.org/20101002202334/http://www.ziffdavisenterprise.com/" rel="nofollow"><img border="0" align="left" _base_href="http://www.eweek.com/" src="http://replay.waybackmachine.org/20101002202334im_/http://www.eweek.com/images/zde/zde-logo-white-background.gif"/></a></td>
+  <td _base_href="http://www.eweek.com/">
+<p style="margin-top: 5px;" class="Footer_Text">
+</p><div class="footerbox"><strong>Vertical Markets:</strong><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Government-IT/">Federal Government IT</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Health-Care-IT/">Health Care IT</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Finance-IT/">Finance IT</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Midmarket/">Mid-Market</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Channel/">Channel Partners</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://blogs.eweek.com/careers/">Careers Blog</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.channelinsider.com/">Value Added Resellers</a><br/></div>
+
+<div class="footerbox"><strong>More eWeek Links:</strong><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/IT-Knowledge-Center/">Tech Knowledge Center</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/newsletter-manage/">Tech Newsletters</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/a/Past-News/Ziff-Davis-Enterprise-RSS-Feeds/">Tech RSS Feeds</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.webbuyersguide.com/bguide/Whitepaper/Wplibrary.asp_Q_sitename_E_webbuyersguide">White Papers</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Podcasts/">Tech Podcasts</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Videos/">Tech Videos</a><br/>
+<a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.eweek.com/c/s/Green-IT/">Green IT</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.omeda.com/ziff/ewk/ewk.cgi?&t=whback&p=lz3home">eWeek Magazine Subscriptions</a><br/></div>
+
+<div class="footerbox"><strong>Enterprise Websites:</strong><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.ziffdavisenterprise.com/">ZDE Home</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.baselinemag.com/">Baseline</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.channelinsider.com/">Channel Insider</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.cioinsight.com/">CIO Insight</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.eseminarslive.com/">eSeminars</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.midmarket.eweek.com/">eWeek Mid-Market</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.publish.com/">Publish Online</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.webbuyersguide.com/">Web Buyers Guide</a><br/></div>
+
+<div class="footerbox"><strong>Developer Websites:</strong><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.devshed.com/">Dev Shed</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.developershed.com/">DeveloperShed</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.aspfree.com/">ASP Free</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.devsource.com/">MS DevSource</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.seochat.com/">SEO Chat</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.codewalkers.com/">Codewalkers</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.tutorialized.com/">Tutorialized</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.scripts.com/">Scripts.com</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.devmechanic.com/">Dev Mechanic</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.devarticles.com/">Dev Articles</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.webhosters.com/">Web Hosters</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.devhardware.com/">Dev Hardware</a><br/></div>
+
+<div class="footerbox"><strong>Technology Websites:</strong><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.deviceforge.com/">Device Forge</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.desktoplinux.com/">Desktop Linux</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.linuxdevices.com/">Linux Devices</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.windowsfordevices.com/">Windows for Devices</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.igrep.com/">iGrep Search Engine</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.pdfzone.com/">PDF Zone</a><br/>
+<a _base_href="http://www.eweek.com/" target="_new" href="http://replay.waybackmachine.org/20101002202334/http://www.linux-watch.com/">Linux Watch</a><br/></div>
+<p/></td>
+
+
+ </tr>
+<tr valign="top" bgcolor="#ffffff" align="left" _base_href="http://www.eweek.com/">
+	<td _base_href="http://www.eweek.com/"><img width="108" height="15" align="left" _base_href="http://www.eweek.com/" src="http://replay.waybackmachine.org/20101002202334im_/http://www.eweek.com/images/spacer.gif"/></td>
+	<td _base_href="http://www.eweek.com/"><p style="margin-top: 5px;" class="Footer_Text">Use of this site is governed by our <a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.ziffdavisenterprise.com/TermsofService.htm" rel="nofollow">Terms of Use</a> and <a _base_href="http://www.eweek.com/" href="http://replay.waybackmachine.org/20101002202334/http://www.ziffdavisenterprise.com/PrivacyPolicy.htm" rel="nofollow">Privacy Policy</a><br/>Copyright &copy;1996-2008 <a _base_href="http://www.eweek.com/" class="Footer_ZD" title="Ziff Davis Enterprise Holdings Inc." href="http://replay.waybackmachine.org/20101002202334/http://www.ziffdavisenterprise.com/">Ziff Davis Enterprise Holdings Inc.</a> All Rights Reserved. eWEEK and Spencer F. Katt, and eWeek Security Watch are trademarks of Ziff Davis Enterprise Holdings, Inc. Reproduction in whole or in part in any form or medium without express written permission of Ziff Davis Enterprise Inc. is prohibited.<br/>eWeek is your best source for the latest <a _base_href="http://www.eweek.com/" href="">Technology News</a>.<br/>Hosted by <span onclick="window.location='http://replay.waybackmachine.org/20101002202334/http://www.hostway.com/'" class="botoverlink"><font color="blue">Hostway</font></span>. </p><p/></td>
+</tr>
+
+</tbody></table></td>
+      </tr>
+    </table>
+  </div>
+    <map name="headermap" id="headermap">
+      <area shape="rect" coords="870,12,999,35" href="http://replay.waybackmachine.org/20101002202334/http://www.ziffdavisenterprise.com/" target="_blank" alt="Ziff Davis Enterprise" />
+      <area shape="rect" coords="6,5,444,79" href="" />
+    </map>
+
+</td>
+  </tr>
+</table>
+
+<!--################################################START OMNITURE CODE HERE########################################-->
+
+
+<div class="omniture" style="display:none">
+<!-- SiteCatalyst code version: G.9.Copyright 1997-2004 Omniture, Inc. More info available athttp://www.omniture.com -->
+<script language="JavaScript"><!--
+var s_pageName="Secuirty Watch Home"
+var s_server=""
+var s_channel="eWEEK Home>Blogs>Security Watch Home"
+var s_pageType=""
+var s_prop1=""
+var s_prop2=""
+var s_prop3=""
+var s_prop4=""
+var s_prop5=""
+var s_prop6="Security Watch Home"
+var s_prop7=""
+var s_prop8=""
+var s_prop9=""
+var s_prop11=""
+var s_prop12="entzd.eweek/blogs/securitywatch"
+var s_prop13=""
+var s_campaign=""
+
+var s_state=""
+var s_zip=""
+var s_events="event4"
+var s_products=""
+var s_purchaseID=""
+var s_eVar1=""
+var s_eVar2=""
+var s_eVar3=""
+var s_eVar4=""
+var s_eVar5=""
+var s_hier1="eWEEK Home>Blogs>Security Watch Home"
+
+var s_account="ziffdavisglobal,ziffdavisenterpriseglobal,ziffdaviseweek"
+//--></script>
+
+<script language="JavaScript" src="http://replay.waybackmachine.org/20101002202334js_/http://common.ziffdavisinternet.com/js/s_code_remote.js"></script>
+
+<script language="JavaScript">
+<!--
+    function sendAnalyticsEvent(accnt) {
+	    s_prop13 += " | " + getBrowserURL();
+        accnt=accnt?accnt:s_account;void(s_gs(accnt));
+    }
+
+    function getBrowserURL() {
+		urlelements = document.location.href.split("/");
+		returnvalue = "";
+		
+		for (var i = 2;i<urlelements.length;i++) {
+			if (i>1) {
+				subelements = urlelements[i].split(".");
+				for (var u=0;u<subelements.length;u++) {
+	                if (subelements[u]!="www") {
+						returnvalue += subelements[u];
+						if (u<subelements.length-1) {
+                                         returnvalue += ".";
+                        }
+                     }
+          	} 
+
+            if (i<urlelements.length-1) {
+               returnvalue += "/";
+			   }   
+			}
+		}
+
+		return returnvalue;
+	}
+
+              
+
+    function sendLinkEvent(accnt,lnkname,type){
+		accnt=accnt?accnt:s_account;s_linkType=type?type:"o";s_lnk=true;
+		s_linkName=lnkname?lnkname:s_linkName?s_linkName:"Flash Link Event";
+		void(s_gs(accnt))}
+		
+//--></script>
+</div>
+
+<!--################################################END OMNITURE CODE HERE########################################-->
+
+<!-- Security Watch Google Analytics Code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://replay.waybackmachine.org/20101002202334/http://www/");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2464436-17");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!-- eWeek Google Analytics Code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://replay.waybackmachine.org/20101002202334/http://www/");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2464436-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 20:23:34 Okt 2, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 20:34:53 Apr 6, 2011.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+
+<!-- This document saved from http://replay.waybackmachine.org/20101002202334/http://securitywatch.eweek.com/ -->
