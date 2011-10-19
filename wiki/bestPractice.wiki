@@ -6,11 +6,7 @@ Assumes that
   * hostPC has started http-proxy at 192.168.2.101:9666
   * guestPC has preconfigured browser with proxy at 127.0.0.1:3333
 
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+ 
 
 = Step0@hostPC =
 {{{
@@ -61,3 +57,9 @@ the browser have to display the host-Data:
 You are coming from: 	923.129.493.561
  (((:
 }}}
+
+
+
+= Links =
+  * [https://support.skype.com/en/faq/FA171/Can-I-run-Skype-for-Windows-from-the-command-line command-line]
+  * [http://forum.skype.com/index.php?showtopic=137441 Skype_commands]
