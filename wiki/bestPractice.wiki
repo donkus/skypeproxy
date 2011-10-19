@@ -1,4 +1,16 @@
-#summary How To . Assumes that hostPC and guestPC has preinstalled Skype-software, and preconfigured default-users with auto-login.
+#summary How To .
+
+Assumes that 
+  * hostPC and guestPC has preinstalled Skype-software
+  * and preconfigured default-users with auto-login.
+  * hostPC has started http-proxy at 192.168.2.101:9666
+  * guestPC has preconfigured browser with proxy at 127.0.0.1:3333
+
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
 
 = Step0@hostPC =
 {{{
@@ -24,6 +36,11 @@ D:\gby>java -jar skypeproxy-0.0.8-SNAPSHOT-jar-with-dependencies.jar send geshas
 connected as listener for app [GESHA]
 }}}
 
+
+= Step3@guestPC =
+start browser, and goto http://somebody.net/info.html
+
+
  
 = Details =
 {{{
@@ -36,8 +53,11 @@ INFO: check for geshaskype
 }}}
 
 
+----
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+the browser have to display the host-Data:
+{{{
+ :)))
+You are coming from: 	923.129.493.561
+ (((:
+}}}
