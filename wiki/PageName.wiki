@@ -29,6 +29,6 @@ log4j.category.eu.blky.log4j.SkypeAppenderTest==DEBUG, SKYPE
 = Output =
 
 {{{
-[14:00:09] test
-[14:00:09] geshaskype: testI
+[14:00:09] junitskype: test
+[14:00:09] junitskype: testI
 }}}
