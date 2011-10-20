@@ -1,3 +1,4 @@
+#summary the same lib could be utilized just for cross-OS logging via log4j.
 #SkypeAppender for log4j.
 
 = pom.xml =
